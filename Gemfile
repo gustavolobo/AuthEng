@@ -15,3 +15,10 @@ gem "jquery-rails"
 
 # To use debugger
 # gem 'debugger'
+
+gem 'devise'
+gem "haml", "~> 3.1.7"
+gem "haml-rails"
+gem "formtastic", "~> 2.2.0"
+gem 'delayed_job_active_record'
+gem "rails3_acts_as_paranoid", "~>0.2.0"
