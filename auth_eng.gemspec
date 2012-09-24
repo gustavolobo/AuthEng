@@ -7,8 +7,8 @@ require "auth_eng/version"
 Gem::Specification.new do |s|
   s.name        = "auth_eng"
   s.version     = AuthEng::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["Gustavo Lobo"]
+  s.email       = ["gustavolobo90@gmail.com"]
   s.homepage    = "TODO"
   s.summary     = "TODO: Summary of AuthEng."
   s.description = "TODO: Description of AuthEng."
