@@ -7,11 +7,12 @@ require "auth_eng/version"
 Gem::Specification.new do |s|
   s.name        = "auth_eng"
   s.version     = AuthEng::VERSION
+  s.platform    = Gem::Platform::RUBY
   s.authors     = ["Gustavo Lobo"]
   s.email       = ["gustavolobo90@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of AuthEng."
-  s.description = "TODO: Description of AuthEng."
+  s.homepage    = "http://github.com/gustavolobo/AuthEng"
+  s.summary     = "Authentication Engine"
+  s.description = "AuthEng is just Devise only with a different flow."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
