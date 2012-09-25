@@ -58,8 +58,8 @@ In your routes file:
 mount AuthEng::Engine, :at => "/auth_eng"
 ```
 And then, add an user (don't forget to configure the email in your environment):
-* seeds.rb
 ```ruby
 AuthEng::User.create(name: "user_name", email: "user_email")
 ```
-(you will receive a confirmation email.)
+on rails console or seeds.rb
+(you will receive a confirmation email)
