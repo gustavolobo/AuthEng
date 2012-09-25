@@ -10,7 +10,11 @@ module AuthEng
     attr_accessible :name, :email, :password, :password_confirmation, :remember_me
     # attr_accessible :title, :body
     
-    acts_as_paranoid :column => 'deleted_at', :type => 'time'
+    if table_exists?
+      if column_names.include?("deleted_at")
+        acts_as_paranoid :column => 'deleted_at', :type => 'time'
+      end
+    end
     
     def only_if_unconfirmed
       pending_any_confirmation {yield}
