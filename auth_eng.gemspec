@@ -13,7 +13,8 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/gustavolobo/AuthEng"
   s.summary     = "Authentication Engine"
   s.description = "AuthEng is just Devise only with a different flow."
-
+  
+  s.require_path = '.'
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
