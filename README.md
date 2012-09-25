@@ -63,3 +63,7 @@ AuthEng::User.create(name: "user_name", email: "user_email")
 ```
 on rails console or seeds.rb
 (you will receive a confirmation email)
+
+Contributing
+------------
+If you found a bug or if you think that should be done an improvement in the project, I'll appreciate any contact.
