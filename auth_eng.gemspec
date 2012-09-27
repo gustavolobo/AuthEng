@@ -25,4 +25,6 @@ Gem::Specification.new do |s|
   s.add_dependency "haml", "~> 3.1.7"
   s.add_dependency "haml-rails", "~> 0.3.5"
   s.add_dependency "rails3_acts_as_paranoid", "~> 0.2.4"
+  
+  s.add_development_dependency "sqlite3"
 end

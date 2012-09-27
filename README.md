@@ -22,6 +22,7 @@ What it does?
 * [Haml](https://github.com/haml/haml) views.
 * [Formtastic](https://github.com/justinfrench/formtastic) forms.
 * Users deletion with [rails3_cts_as_paranoid](https://github.com/goncalossilva/rails3_acts_as_paranoid).
+* Permissions with [Cancan](https://github.com/ryanb/cancan).
 
 Usage
 -----
@@ -59,7 +60,8 @@ mount AuthEng::Engine, :at => "/auth_eng"
 ```
 And then, add an user (don't forget to configure the email in your environment):
 ```ruby
-AuthEng::User.create(name: "user_name", email: "user_email")
+AuthEng::Role.create(name: "Administrator")
+AuthEng::User.create(name: "user_name", email: "user_email", role_id: 1)
 ```
 on rails console or seeds.rb
 (you will receive a confirmation email)

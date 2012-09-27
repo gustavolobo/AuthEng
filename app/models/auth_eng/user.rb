@@ -7,8 +7,12 @@ module AuthEng
            :recoverable, :rememberable, :trackable, :validatable
   
     # Setup accessible (or protected) attributes for your model
-    attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+    attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :role_id
     # attr_accessible :title, :body
+    
+    validates_presence_of :role_id
+    
+    belongs_to :role
     
     if table_exists?
       if column_names.include?("deleted_at")
@@ -44,6 +48,10 @@ module AuthEng
     
     def send_on_create_confirmation_instructions
       Devise::Mailer.delay.confirmation_instructions(self)
+    end
+    
+    def role?(role_name)
+      self.role.name == role_name ? true : false
     end
   end
 end
