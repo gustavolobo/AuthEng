@@ -1,12 +1,7 @@
-#dashboard
-	%h1.blue= "Account Activation"
-	#ics_form
-		.ics_form
-			= semantic_form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'} do |f|
-				= f.inputs do
-					= f.input :password
-					= f.input :password_confirmation
-					= f.input :confirmation_token, :input_html => {:value => @confirmation_token}
-					
-				.group.navform.wat-cf
-					= f.submit
+= semantic_form_for resource, :as => resource_name, :url => update_user_confirmation_path, :html => {:method => 'put'} do |f|
+	= f.inputs do
+		= f.input :password
+		= f.input :password_confirmation
+		= f.input :confirmation_token, :input_html => {:value => @confirmation_token}
+		
+	= f.submit

@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     auth_eng (0.0.2)
+      cancan (~> 1.6.8)
       delayed_job_active_record (~> 0.3.2)
       devise (~> 2.1.2)
       formtastic (~> 2.2.1)

@@ -10,7 +10,7 @@ module AuthEng
     attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :role_id
     # attr_accessible :title, :body
     
-    validates_presence_of :role_id
+    validates_presence_of :name, :role_id
     
     belongs_to :role
     
