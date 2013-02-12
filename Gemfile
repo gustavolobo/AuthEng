@@ -23,3 +23,4 @@ gem "formtastic", "~> 2.2.0"
 gem 'delayed_job_active_record'
 gem "rails3_acts_as_paranoid", "~>0.2.0"
 gem "cancan"
+gem "letter_opener", :group => :development
