@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "devise", "~> 2.1.2"
-  s.add_dependency "delayed_job_active_record", "~> 0.3.2"
+  s.add_dependency "delayed_job_active_record", "~> 0.4.0"
   s.add_dependency "formtastic", "~> 2.2.1"
   s.add_dependency "haml", "~> 3.1.7"
   s.add_dependency "haml-rails", "~> 0.3.5"
