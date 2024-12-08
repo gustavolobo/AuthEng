@@ -1,9 +1,0 @@
-= semantic_form_for @user do |f|
-	
-	= f.inputs do
-		= f.input :name
-		= f.input :email
-		- if current_user.role?("Administrator")
-			= f.input :role_id, :label => t('.roles'), :as => :radio, :collection => roles_to_form(@user), :required => true
-			
-	= f.submit

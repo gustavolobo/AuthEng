@@ -1,71 +1,28 @@
-AuthEng
-=======
+# AuthEng
+Short description and motivation.
 
-Motivation
-----------
-What led me to the creation of this engine was the fact that on several projects that I have worked on, always have the same problems with the gem devise, and almost always because I want that the authentication follows a flow that devise doesn't follow by default.
+## Usage
+How to use my plugin.
 
-For example, I don't want people to be able to register themselves, I want it to be done by an authenticated user. And then, these people should receive an account confirmation/activation email, and when they click the link in that email, they can choose their own password.
+## Installation
+Add this line to your application's Gemfile:
 
-So, I decided to create an engine, trying to make it as easy as possible to integrate with a newly created application.
-
-Later I will try to clarify the flow of this engine. Any suggestion, thanks.
-
-What it does?
--------------
-### Authentication & Users Mgmt
-* [Devise](https://github.com/plataformatec/devise) authentication.
-* Users cannot register themselves. It's supposed to be an administrator to do so.
-* When an administrator registers an user, he doesn't choose a password for him. An email is sent, and the user can then confirm his account by choosing a password.
-* Users management backoffice.
-* Emails sent with [Delayed Job](https://github.com/collectiveidea/delayed_job).
-* [Haml](https://github.com/haml/haml) views.
-* [Formtastic](https://github.com/justinfrench/formtastic) forms.
-* Users deletion with [rails3_cts_as_paranoid](https://github.com/goncalossilva/rails3_acts_as_paranoid).
-* Permissions with [Cancan](https://github.com/ryanb/cancan).
-
-Usage
------
-###If you don't have delayed_job, in your Gemfile add:
 ```ruby
-gem 'delayed_job_active_record'
-```
-And run:
-```
-bundle install
-rails generate delayed_job:active_record
-rake db:migrate
+gem "auth_eng"
 ```
 
-###Installation
-In your project:
+And then execute:
+```bash
+$ bundle
 ```
-cd vendor/engines
-git clone https://github.com/gustavolobo/AuthEng.git
-cd ../..
-```
-In your Gemfile:
-```ruby
-gem 'auth_eng', :path => "vendor/engines"
-```
-Run:
-```
-bundle install
-rake auth_eng:install:migrations
-rake db:migrate
-```
-In your routes file:
-```ruby
-mount AuthEng::Engine, :at => "/auth_eng"
-```
-And then, add an user (don't forget to configure the email in your environment):
-```ruby
-AuthEng::Role.create(name: "Administrator")
-AuthEng::User.create(name: "user_name", email: "user_email", role_id: 1)
-```
-on rails console or seeds.rb
-(you will receive a confirmation email)
 
-Contributing
-------------
-If you found a bug or if you think that should be done an improvement in the project, I'll appreciate any contact.
+Or install it yourself as:
+```bash
+$ gem install auth_eng
+```
+
+## Contributing
+Contribution directions go here.
+
+## License
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

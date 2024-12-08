@@ -1,6 +1,6 @@
+require "auth_eng/version"
 require "auth_eng/engine"
 
 module AuthEng
-  class AuthEng < Rails::Engine
-  end
+  # Your code goes here...
 end

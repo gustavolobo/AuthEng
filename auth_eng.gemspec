@@ -1,32 +1,29 @@
-$:.push File.expand_path("../lib", __FILE__)
+require_relative "lib/auth_eng/version"
 
-# Maintain your gem's version:
-require "auth_eng/version"
+Gem::Specification.new do |spec|
+  spec.name        = "auth_eng"
+  spec.version     = AuthEng::VERSION
+  spec.authors     = [ "Gustavo Semião-Lobo" ]
+  spec.email       = [ "gustavolobo90@gmail.com" ]
+  spec.homepage    = "TODO"
+  spec.summary     = "TODO: Summary of AuthEng."
+  spec.description = "TODO: Description of AuthEng."
+  spec.license     = "MIT"
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = "auth_eng"
-  s.version     = AuthEng::VERSION
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Gustavo Lobo"]
-  s.email       = ["gustavolobo90@gmail.com"]
-  s.homepage    = "http://github.com/gustavolobo/AuthEng"
-  s.summary     = "Authentication Engine"
-  s.description = "AuthEng is just Devise only with a different flow."
-  
-  s.require_path = '.'
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
-  s.add_dependency "rails", "~> 3.2.8"
-  s.add_dependency "devise", "~> 2.1.2"
-  s.add_dependency "delayed_job_active_record", "~> 0.4.0"
-  s.add_dependency "formtastic", "~> 2.2.1"
-  s.add_dependency "haml", "~> 3.1.7"
-  s.add_dependency "haml-rails", "~> 0.3.5"
-  s.add_dependency "rails3_acts_as_paranoid", "~> 0.2.4"
-  s.add_dependency "cancan", "~> 1.6.8"
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
-  s.add_development_dependency "letter_opener"
-  s.add_development_dependency "sqlite3"
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
+    Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  end
+
+  spec.add_dependency "rails", ">= 8.0.0"
+  spec.add_dependency "pg", ">= 1.5.9"
+
+  spec.add_development_dependency "rspec-rails"
 end
